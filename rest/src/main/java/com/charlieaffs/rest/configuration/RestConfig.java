@@ -1,0 +1,9 @@
+package com.charlieaffs.rest.configuration;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = {"com.charlieaffs.rest", "com.charlieaffs.data.tradeit"})
+public class RestConfig {
+}

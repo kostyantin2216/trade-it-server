@@ -1,0 +1,92 @@
+@CHARSET "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	font-size: 30px;
+    font-weight: bold;
+}
+
+.header {
+    display: block;
+    height: 87px;
+    padding: 0 200px;
+    padding-top: 7px;
+    background: rgb(53, 42, 36);
+}
+
+.header .icon {
+	display: inline;
+	width: 40%;
+}
+
+.header .icon img {
+    width: 80px;
+    float: left;
+}
+
+.header .icon .title {
+	color: rgb(212, 212, 209);
+	position: relative;
+    top: 25px;
+    left: 10px;
+}
+
+.header .menu {
+	float: right;
+	width: 60%;
+}
+
+.header .menu ul {
+	width: 100%;    
+	list-style-type: none;
+    overflow: hidden;
+}
+
+.header .menu ul li {
+	float: right;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+.header .menu ul li a {
+    display: inline-block;
+    color: rgb(212, 212, 209);
+    text-decoration: none;
+}
+
+.header .menu ul li a:hover {
+	color: rgb(183, 202, 217);
+}
+
+.bigBackground {
+	background-image: url("../imgs/backgrounds/bg-dollar-exchange-rate.jpg");
+	height: 400px;
+}
+
+.bigBackground .intro-text {
+    color: #F2F2F2;
+    font-size: 30px;
+    text-align: left;
+    position: relative;
+    top: 100px;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.section {
+	display: block;
+}
+
+.title-divider {
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.opaque-text {
+	opacity: 1;
+}
+

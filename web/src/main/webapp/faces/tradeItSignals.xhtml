@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition template="templates/main-template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+	
+	<ui:define name="stylesheets">
+		<link href="/web/css/tradeit-styles.css" rel="stylesheet" type="text/css" />
+	</ui:define>
+	
+	<ui:define name="header" >
+		<div class="icon">
+			<img src="../imgs/ic_launcher.png" />
+			<h:outputText styleClass="title" value="Trade It Signals" />
+		</div>
+		
+		<div class="menu">
+			<ul>
+				<li><a href="#">#{msgs['about.us']}</a></li>
+				<li><a href="#">#{msgs['download']}</a></li>
+			</ul>
+		</div>
+	</ui:define>
+	
+	<ui:define name="content">
+		<div class="bigBackground">
+			<div class="intro-text">
+				<h:outputText styleClass="opaque-text" value="#{msgs['tisignals.intro.text']}" />
+			</div>
+		</div>
+		<div class="section">
+			<div class="title-divider">
+				<h:outputText styleClass="title"
+							  value="#{msgs['tisignals.first.section.title']}"  />
+			</div>
+			<div class="body">
+				<div class="features-list">
+					<ul>
+						<li>Receive 5 to 10 Signals a day</li>
+						<li>Accurate signals for 32 different currency pairs</li>
+						<li>Control your signals with either time or currency pair filters</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title-divider">
+				<h:outputText styleClass="title"
+							  value="#{msgs['tisignals.second.section.title']}"  />
+			</div>
+			<div class="body">
+				<div class="features-list">
+					<ul>
+						<li>Professional charts with various chart types for currency pairs and stocks</li>
+						<li></li>
+						<li>Control your signals with either time or currency pair filters</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="title-divider">
+				<h:outputText styleClass="title"
+							  value="#{msgs['tisignals.third.section.title']}"  />
+			</div>
+		</div>
+	</ui:define>
+	
+</ui:composition>
+
+
+

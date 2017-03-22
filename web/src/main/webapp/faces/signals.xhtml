@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition template="templates/main-template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+	
+	<ui:define name="content">
+	
+		<h1 class="page-header">Signals</h1>
+
+		<h:form>
+			<p:dataTable var="signal" value="#{signalBean.getSignals()}" rows="50"
+                         paginator="true"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}">
+				<p:column headerText="#{msgs['id']}" sortBy="#{signal.id}">
+					<h:outputText value="#{signal.id}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.asset']}" sortBy="#{signal.asset}">
+					<h:outputText value="#{signal.asset}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.entry.rate']}" sortBy="#{signal.entryRate}">
+					<h:outputText value="#{signal.entryRate}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.expiry.rate']}" sortBy="#{signal.expiryRate}">
+					<h:outputText value="#{signal.expiryRate}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.call']}" sortBy="#{signal.isCall}">
+					<h:outputText value="#{signal.isCall}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.expiry.time']}" sortBy="#{signal.expiryTime}">
+					<h:outputText value="#{signal.expiryTime}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.created.at']}" sortBy="#{signal.createdAt}">
+					<h:outputText value="#{signal.createdAt}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+	
+</ui:composition>
+
+
+

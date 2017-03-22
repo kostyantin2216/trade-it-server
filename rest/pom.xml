@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.charlieaffs</groupId>
+  	<artifactId>charlieaffs-rest</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<packaging>war</packaging>
+  
+	<name>rest</name>
+	
+	<properties>
+		<springframework.version>4.3.0.RELEASE</springframework.version>
+		<servlet.version>2.5</servlet.version>
+		<jerseyframework.version>2.22.2</jerseyframework.version>
+		<infrastructure.version>0.0.1-SNAPSHOT</infrastructure.version>
+		<genson.version>1.4</genson.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.charlieaffs</groupId>
+			<artifactId>charlieaffs-infrastructure</artifactId>
+			<version>${infrastructure.version}</version>
+		</dependency>
+        
+        <!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet.version}</version>
+		</dependency>
+        
+        <!-- Jersey -->
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-spring3</artifactId>
+			<version>${jerseyframework.version}</version>
+			<exclusions>
+	            <exclusion>
+	                <artifactId>spring-context</artifactId>
+	                <groupId>org.springframework</groupId>
+	            </exclusion>
+	            <exclusion>
+	                <artifactId>spring-beans</artifactId>
+	                <groupId>org.springframework</groupId>
+	            </exclusion>
+	            <exclusion>
+	                <artifactId>spring-core</artifactId>
+	                <groupId>org.springframework</groupId>
+	            </exclusion>
+	            <exclusion>
+	                <artifactId>spring-web</artifactId>
+	                <groupId>org.springframework</groupId>
+	            </exclusion>
+        	</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.owlike</groupId>
+			<artifactId>genson</artifactId>
+			<version>${genson.version}</version>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>

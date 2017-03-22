@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+
+	<ui:insert name="meta">
+		<ui:insert name="metadata">
+			<title>#{metadataBean.title}</title>
+			<meta name="description" content="#{metadataBean.description}" />
+			<meta name="keywords" content="#{metadataBean.keywords}" />
+		</ui:insert>
+		<!-- <link rel="shortcut icon" href="favicon" />  -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="cache-control" content="no-cache" />
+	</ui:insert>
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/styles.css" rel="stylesheet" type="text/css" />
+	<ui:insert name="stylesheets" />
+
+	<style>
+		<ui:insert name="style"/>
+	</style>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</h:head>
+<h:body>
+
+	<div class="header">
+		<ui:include src="/faces/fragments/navigation.xhtml" />
+		<ui:insert name="header" />
+	</div>
+
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ui:include src="/faces/fragments/sidebar.xhtml"></ui:include>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<ui:insert name="content" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<ui:insert name="footer" />
+	</div>
+
+
+	<script src="../../js/functions.js"></script>
+	<script src="../../js/ie10-viewport-bug-workaround.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<ui:insert name="scripts" />
+
+</h:body>
+</html>
+

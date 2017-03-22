@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+       	 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.charlieaffs.data.tradeit.model.User" table="User" catalog="services" 
+		   dynamic-insert="true">
+		<id name="id" type="java.lang.Integer">
+			<generator class="increment" />
+		</id>
+		<property name="firstName" type="java.lang.String" />
+		<property name="lastName" type="java.lang.String" />
+		<property name="password" type="java.lang.String" />
+		<property name="tempPassword" type="java.lang.String" />
+		<property name="email" type="java.lang.String" />
+		<property name="telephone" type="java.lang.String" />
+		<property name="countryId" type="java.lang.Integer" />
+		<property name="country" type="java.lang.String" />
+		<property name="channels" type="java.lang.String" />
+		<property name="isRegistered" type="java.lang.Boolean" />
+		<property name="isAdmin" type="java.lang.Boolean" />	
+		<property name="isOnTrial" type="java.lang.Boolean" />
+		<property name="tempPasswordRequestTime" type="java.util.Date" />
+		<property name="lastPayment" type="java.util.Date" />	
+		<property name="updatedAt" type="java.util.Date" />
+		<property name="createdAt" type="java.util.Date" />
+	</class>
+</hibernate-mapping>	

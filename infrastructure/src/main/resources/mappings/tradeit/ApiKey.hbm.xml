@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.charlieaffs.data.tradeit.model.ApiKey" table="ApiKey" catalog="services" 
+		   dynamic-insert="true">
+		<id name="apiKey" type="java.lang.String" >
+			<generator class="assigned" />
+		</id>
+		<property name="description" type="java.lang.String" />		
+		<property name="isActive" type="java.lang.Boolean" />
+	</class>
+</hibernate-mapping>

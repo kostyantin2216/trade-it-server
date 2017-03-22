@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition template="templates/main-template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+	
+	<ui:define name="content">
+	
+		<h1 class="page-header">Users</h1>
+
+		<h:form>
+			<p:commandButton id="toggler" type="button" value="Columns" style="float:right" icon="ui-icon-calculator" />
+	        <p:columnToggler datasource="users" trigger="toggler" />
+			
+			<p:dataTable id="users" var="user" value="#{userBean.users}" rows="50"
+                         paginator="true"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}">				
+				<p:column headerText="#{msgs['field.id']}" sortBy="#{user.id}">
+					<h:outputText value="#{user.id}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.first.name']}" sortBy="#{user.firstName}">
+					<h:outputText value="#{user.firstName}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.last.name']}" sortBy="#{user.lastName}">
+					<h:outputText value="#{user.lastName}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.password']}" sortBy="#{user.password}">
+					<h:outputText value="#{user.password}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.email']}" sortBy="#{user.email}">
+					<h:outputText value="#{user.email}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.telephone']}" sortBy="#{user.telephone}">
+					<h:outputText value="#{user.telephone}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.country.id']}" sortBy="#{user.countryId}">
+					<h:outputText value="#{user.countryId}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.country']}" sortBy="#{user.country}">
+					<h:outputText value="#{user.country}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.registered']}" sortBy="#{user.isRegistered}">
+					<h:outputText value="#{user.isRegistered}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.on.trial']}" sortBy="#{user.isOnTrial}">
+					<h:outputText value="#{user.isOnTrial}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.admin']}" sortBy="#{user.isAdmin}">
+					<h:outputText value="#{user.isAdmin}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.last.payment']}" sortBy="#{user.lastPayment}">
+					<h:outputText value="#{user.lastPayment}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.updated.at']}" sortBy="#{user.updatedAt}">
+					<h:outputText value="#{user.updatedAt}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.created.at']}" sortBy="#{user.createdAt}">
+					<h:outputText value="#{user.createdAt}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.channels']}" sortBy="#{user.channels}">
+					<h:outputText value="#{user.channels}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.temp.password']}" sortBy="#{user.tempPassword}">
+					<h:outputText value="#{user.tempPassword}" />
+				</p:column>
+				<p:column headerText="#{msgs['field.temp.pwd.request.time']}" sortBy="#{user.tempPasswordRequestTime}">
+					<h:outputText value="#{user.tempPasswordRequestTime}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+	
+</ui:composition>
+
+
+
